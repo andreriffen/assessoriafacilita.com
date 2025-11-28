@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /db/
+Disallow: /staff/
+Disallow: /track_click.php
+Disallow: /login.php
+Disallow: /post-login.php
+Disallow: /relatorio-campanhas.php
+Allow: /
+
+Sitemap: https://www.assessoriafacilita.com/sitemap.xml

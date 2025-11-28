@@ -1,0 +1,36 @@
+# Redirecionamento para HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# === SUAS ROTAS CURTAS AQUI ===
+RewriteRule ^pasta-contratos-kommo/?$ https://drive.google.com/drive/folders/1Wz0plhMbTYVaDBc3fm0O6fMUU_q6lwu3?usp=sharing [R=301,L]
+
+# Definir Charset e Encoding
+AddDefaultCharset UTF-8
+AddType 'text/html; charset=UTF-8' html htm
+
+# Prevenir listagem de diretórios
+Options -Indexes
+
+# Redirecionar URLs antigas ou 404 para a home
+ErrorDocument 404 /index.html
+
+# Proteção de diretórios sensíveis
+#<Directory "/db/">
+#    Deny from all
+#</Directory>
+#<Directory "/staff/">
+#    Deny from all
+#</Directory>
+
+# Configurações para cache de recursos estáticos
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+</IfModule>

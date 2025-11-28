@@ -1,0 +1,7 @@
+# Ativa o mod_rewrite para fazer a reescrita de URL
+RewriteEngine On
+
+# Verifica se a URL é para a pasta metodo-guardiao
+RewriteCond %{REQUEST_URI} ^/metodo-guardiao/?$
+# Redireciona para o index.html sem mostrar o arquivo
+RewriteRule ^(.*)$ /metodo-guardiao/index.html [L]

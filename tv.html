@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TV Facilita</title>
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="assets/lib/owlcarousel/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="assets/lib/owlcarousel/assets/owl.theme.default.min.css" />
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="assets/lib/animate/animate.min.css" />
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #07080D;
+      overflow: hidden;
+    }
+
+    .owl-carousel .item {
+      position: relative;
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .slide-text {
+      position: absolute;
+      bottom: 40px;
+      left: 40px;
+      color: white;
+      font-size: 2rem;
+      font-family: sans-serif;
+      animation-duration: 1.5s;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="owl-carousel owl-theme">
+    <div class="item" style="background-image: url('assets/img/tv/1.jpg')">
+    </div>
+    <div class="item" style="background-image: url('assets/img/tv/2.jpg')">
+    </div>
+    <div class="item" style="background-image: url('assets/img/tv/3.jpg')">
+    </div>
+    <div class="item" style="background-image: url('assets/img/tv/4.jpg')">
+    </div>
+    <!-- <div class="item" style="background-image: url('assets/img/tv/4.jpg')">
+      <div class="slide-text animate__animated animate__fadeInUp">Mais de 5.000 clientes atendidos</div>
+    </div> -->
+  </div>
+
+  <!-- jQuery + Owl Carousel JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="assets/lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 0,
+      items: 1,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplayHoverPause: false,
+      animateOut: 'fadeOut',
+      animateIn: 'fadeIn',
+      smartSpeed: 1000
+    });
+  </script>
+</body>
+</html>
